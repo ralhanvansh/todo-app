@@ -1,5 +1,6 @@
-<li>
-  <%= todo.description %><br>
-  <strong>Priority:</strong><%= todo.priority %><br>
-  <%= link_to 'done', todo_path(todo), method: 'delete'%>
-</li>
+<li id="<%= todo.id %>">
+    <%= todo.description %><br>
+    <strong>priority: </strong><%= todo.priority %><br>
+
+    <%= link_to "done", todo_path(todo), method: 'delete', remote: true %>
+  </li>
